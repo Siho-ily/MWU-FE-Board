@@ -1,0 +1,25 @@
+html, body{height: 100%}
+
+a {text-decoration: none;}
+a:visited{color: #000; }
+
+header{display:flex; height: 60px;}
+header h1{width:200px; padding:18px 0; font-size: 24px; font-weight: bold; text-align: center;}
+header nav{padding: 18px 0;}
+
+main,section{height: calc(100% - 100px);}
+
+footer{padding: 11px 12px 12px 12px; border-top:1px solid #CCC;}
+
+.tbl_header {display: flex; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC;}
+.tbl_data {display: flex; border-bottom: 1px solid #CCC;}
+
+.tbl_cell_no{width: 80px; padding: 8px 0; text-align: center;}
+.tbl_cell_title{width: calc(100% - 230px); padding: 8px 0; text-align: center;}
+.tbl_cell_reg_date{width: 150px; padding: 8px 0; text-align: center;}
+
+
+/* board list */
+.wrap_board{margin-top: 24px;}
+.wrap_board_register{width:800px; margin: 0 auto; text-align: right;}
+.wrap_board_table{width:800px; margin: 10px auto 0 auto;}

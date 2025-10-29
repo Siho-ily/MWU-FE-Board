@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+<section layout:fragment="content">
+  <h2>게시글 등록</h2>
+
+  <form id="board_form" name="board_form" method="post" action="/board/insert">
+    <table>
+      <tr>
+        <th>제목</th>
+        <td>
+          <input type="text" id="title" name="title" class="title">
+        </td>
+      </tr>
+      <tr>
+        <th>내용</th>
+        <td>
+          <textarea id="contents" name="contents" style="width:100%;height:200px;"></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <button type="button" id="btn_submit">등록</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      let form = $('#board_form');
+      let title = $("#title").val();
+      let contents = $("#contents").val();
+
+      $('#btn_submit').click(function() {
+        title = $("#title").val();
+        contents = $("#contents").val();
+
+        if($.trim(title) === "" || title.length == 0) {
+          alert("제목을 입력해주세요.");
+          return;
+        }
+
+        if($.trim(contents) === "" || contents.length == 0) {
+          alert("내용을 입력해주세요.");
+          return;
+        }
+
+        form.submit();
+      });
+    });
+  </script>
+</section>
+</html>
