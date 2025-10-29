@@ -3,30 +3,33 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layout/layout}">
 <section layout:fragment="content">
-  <h2>게시글 등록</h2>
+  <!--<h2>게시글 등록</h2>-->
+  <div class="wrap_board_form">
 
-  <form id="board_form" name="board_form" method="post" action="/board/insert">
-    <table>
-      <tr>
-        <th>제목</th>
-        <td>
-          <input type="text" id="title" name="title" class="title">
-        </td>
-      </tr>
-      <tr>
-        <th>내용</th>
-        <td>
-          <textarea id="contents" name="contents" style="width:100%;height:200px;"></textarea>
-        </td>
-      </tr>
+    <form id="board_form" name="board_form" method="post" action="/board/insert">
+      <div class="wrap_board_form_control">
+        <button type="button" id="btn_submit">등록</button>
+        <button type="button" id="btn_cancel">취소</button>
+      </div>
 
-      <tr>
-        <td colspan="2">
-          <button type="button" id="btn_submit">등록</button>
-        </td>
-      </tr>
-    </table>
-  </form>
+      <table class="board_form_table">
+        <tr class="board_form_title">
+          <th>제목</th>
+          <td>
+            <input type="text" id="title" name="title" class="title">
+          </td>
+        </tr>
+
+        <tr>
+          <th>내용</th>
+          <td>
+            <textarea id="contents" name="contents"></textarea>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+
 
   <script>
     $(document).ready(function() {

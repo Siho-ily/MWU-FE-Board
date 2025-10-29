@@ -6,7 +6,7 @@
 <section layout:fragment="content">
   <div class="wrap_board">
     <div class="wrap_board_register">
-    <a href="/board/register">[게시글 등록]</a>
+      <a href="/board/register">[게시글 등록]</a>
     </div>
 
 
@@ -27,7 +27,7 @@
           </a>
         </li>
         <li class="tbl_cell_reg_date">
-          <span th:text="${#temporals.format(data.reg_date, 'yyyy-MM-dd HH:mm ')}">Contents</span>
+          <span th:text="${#temporals.format(data.reg_date, 'yyyy-MM-dd HH:mm')}">Contents</span>
         </li>
       </ul>
     </div>

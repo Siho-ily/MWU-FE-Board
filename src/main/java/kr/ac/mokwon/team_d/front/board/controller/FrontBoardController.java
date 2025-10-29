@@ -20,12 +20,12 @@ public class FrontBoardController {
     @Autowired
     private FrontBoardServiceImpl frontBoardServiceImpl;
 
-    /*@GetMapping("/")
+    @GetMapping("")
     public String boardListRedirect(
             Model model
     ) {
-        return "redirect:board/list";
-    }*/
+        return "redirect:/board/list";
+    }
 
     @GetMapping("/list")
     public String boardList(
@@ -55,7 +55,6 @@ public class FrontBoardController {
 
     @GetMapping("/register")
     public String frontBoardRegister() {
-
         return "front/board/register";
     }
 

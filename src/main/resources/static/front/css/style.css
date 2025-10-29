@@ -11,7 +11,7 @@ main,section{height: calc(100% - 100px);}
 
 footer{padding: 11px 12px 12px 12px; border-top:1px solid #CCC;}
 
-.tbl_header {display: flex; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC;}
+.tbl_header {display: flex; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; background-color: #EEE;}
 .tbl_data {display: flex; border-bottom: 1px solid #CCC;}
 
 .tbl_cell_no{width: 80px; padding: 8px 0; text-align: center;}
@@ -23,3 +23,50 @@ footer{padding: 11px 12px 12px 12px; border-top:1px solid #CCC;}
 .wrap_board{margin-top: 24px;}
 .wrap_board_register{width:800px; margin: 0 auto; text-align: right;}
 .wrap_board_table{width:800px; margin: 10px auto 0 auto;}
+
+/* board register */
+.wrap_board_form{
+    width:800px; margin: 10px auto 0 auto;
+}
+#board_form{
+    border: 1px solid #CCC;
+    box-shadow: 1px 1px 2px #CCCCCC66;
+}
+.wrap_board_form_control{
+    text-align:right;
+    padding: 20px;
+}
+
+.wrap_board_form_control > button{
+    height: 30px;
+    width: 50px;
+}
+
+.wrap_board_form_control > button + button {
+    margin-left: 8px;
+}
+
+table > tr + tr {
+    margin-top: 10px;
+}
+
+.board_form_table{
+    width: 100%
+}
+
+th {
+    width: 100px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+td {
+    width: calc(100% - 120px);
+}
+
+input#title{
+    width: calc(100% - 40px);
+}
+textarea#contents{
+    width: calc(100% - 40px);
+    height: 400px;
+}
